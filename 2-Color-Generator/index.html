@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <title>Color Generator</title>
+  </head>
+  <body>
+    <h1>Color Generator</h1>
+    <div class="container">
+      <!-- HEX Generator -->
+      <div class="hex-color-container">
+        <button id="hexBtn">Create Hex Color</button>
+        <div class="color-box" id="colorBox">#000000</div>
+      </div>
+
+      <!-- RGB Sliders -->
+      <div class="rgb-color-container">
+        <label for="red">Red</label>
+        <input type="range" min="0" max="255" value="0" id="red" />
+
+        <label for="green">Green</label>
+        <input type="range" min="0" max="255" value="0" id="green" />
+
+        <label for="blue">Blue</label>
+        <input type="range" min="0" max="255" value="0" id="blue" />
+
+        <div id="rgbValue">rgb(0, 0, 0)</div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
