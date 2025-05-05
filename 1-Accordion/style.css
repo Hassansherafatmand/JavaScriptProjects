@@ -10,9 +10,12 @@ body {
     text-align: center;
     margin-bottom: 30px;
   }
+<<<<<<< HEAD
   h3{
     color: #686868; ;
   }
+=======
+>>>>>>> a5e681088448665e25f2b71d96ce1af941d24496
   
   .accordion-item {
     background-color: #fff;
@@ -24,21 +27,27 @@ body {
   }
   
   .accordion-title {
+<<<<<<< HEAD
     display: flex;
     justify-content:space-between;
     align-items: center;
+=======
+>>>>>>> a5e681088448665e25f2b71d96ce1af941d24496
     padding: 15px;
     font-weight: bold;
     cursor: pointer;
     background-color: #f1f1f1;
     transition: background-color 0.3s ease;
   }
+<<<<<<< HEAD
   .toggle-icon {
     font-size: 20px;
     font-weight: bold;
     color: #333;
     transition: transform 0.3s ease;
   }
+=======
+>>>>>>> a5e681088448665e25f2b71d96ce1af941d24496
   
   .accordion-title:hover {
     background-color: #e2e2e2;
