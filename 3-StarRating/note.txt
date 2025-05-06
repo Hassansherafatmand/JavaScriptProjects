@@ -152,3 +152,28 @@ We can view commit information using the git log command, displaying all commits
 9. Let's practice!
 03:40 - 03:47
 Now let's use the commands we have learned to navigate the Git commit structure!
+
+
+git log
+
+
+1- Stablishing the culture
+Stablish the culture that is going to happen during the quarter.
+It allows students to feel comfortable and also get them to understand what 
+you exdcpet and how the class work
+
+2- creating a freindly and warm environment that students feel comfortable, they are invited , safe place to be. 
+
+3- Desck and Materials organization procedures.
+
+4-talking about routins and expectation.
+
+-5 Procedures that keep the flow of the class like using nonverbal act that alow students to take a break like going to restroom or drinkking water. (transition is very important) 
+-6 following up my expectations( makesure studnets follow my expectation).
+
+-6 discussing about non-verbal (like going to rest room)
+-6 practicng overtime that students feel profecint about the tasks.
+
+
+7- morning routing
+

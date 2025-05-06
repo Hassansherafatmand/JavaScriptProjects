@@ -1,0 +1,36 @@
+✅ Other Useful Endpoints
+Purpose	URL
+All posts	        https://jsonplaceholder.typicode.com/posts
+All users	        https://jsonplaceholder.typicode.com/users
+One user	        https://jsonplaceholder.typicode.com/users/1
+All comments	    https://jsonplaceholder.typicode.com/comments
+Comments by post	https://jsonplaceholder.typicode.com/posts/1/comments
+
+
+✅ Best Practice: Be Descriptive and Consistent
+Context    	                    Good Function Names
+Posts or blog entries	        renderPosts, displayPosts, showPosts
+User data	                    renderUserInfo, displayUserData, showProfile
+Comments	                    displayComments, renderComments
+Generic data	                displayResults, renderData, showResponse
+Error handling	                displayError, renderErrorMessage
+
+
+✅ API Lists:
+
+    🟢 List Images:
+    1️⃣ Get a list of images by using the /v2/list endpoint.
+    https://picsum.photos/v2/list
+    The API will return 30 items per page by default.
+
+    2️⃣ To request another page, use the ?page parameter.
+    To change the amount of items per page, use the ?limit parameter.
+    https://picsum.photos/v2/list?page=2&limit=100
+    The Link header includes pagination information about the next/previous pages
+
+    🟢
+    🟢
+    🟢
+    🟢
+    🟢
+    🟢
