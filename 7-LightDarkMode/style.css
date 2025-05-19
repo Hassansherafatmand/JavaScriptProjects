@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.light {
+  background-color: #eee;
+}
+
+body.dark {
+  background-color: #4a4a4a;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+h2 {
+  color: green;
+}
+button {
+  padding: 20px;
+  width: 200px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #393939;
+  background-color: yellow;
+  border-radius: 16px;
+  cursor: pointer;
+}

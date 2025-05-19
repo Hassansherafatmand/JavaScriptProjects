@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 40px 0;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.tabs__button-group {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tabs__button {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #bd0c30;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tabs__button:hover {
+  background-color: #d24b4b;
+  transform: translateY(-2px);
+}
+
+.tabs__button.active {
+  background-color: #8e0b24;
+}
+
+.tabs__content-wrapper {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.tabs__content {
+  display: none;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tabs__content.active {
+  display: block;
+}

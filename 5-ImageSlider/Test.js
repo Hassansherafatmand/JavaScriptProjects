@@ -6,6 +6,7 @@ const dotsContainer = document.querySelector(".dots-container");
 
 //Fetching Data Section
 //-----------------------------------------------------------------
+//Fetching Data Using sync Method
 async function fetchDataUsingAsyncMethod() {
   try {
     const response = await fetch(
@@ -15,65 +16,70 @@ async function fetchDataUsingAsyncMethod() {
       }
     );
     const imageList = await response.json();
-    console.log(imageList);
     displayImageSlider(imageList);
   } catch (error) {
     console.log(error);
   }
 }
 
-// Dispaly Image function
+//Display Image Slider
 function displayImageSlider(getImageSlider) {
   slider.innerHTML = getImageSlider
     .map(
       (item) => `
-      <div class= "slide">
-      <img src=${item.download_url} alt=${item.id} />
-      </div>
+     <div class="slide">
+        <img src=${item.download_url} alt=${item.id}>
+    </div>
+  
   `
     )
-    .join("");
-
+    .join(" ");
   dotsContainer.innerHTML = getImageSlider
     .map(
-      (item, index) => `
-    <span class="dot ${
-      index === 0 ? "active" : ""
-    } " data-image-slide=${index} ></span>
-
-    `
+      (item, index) => ` 
+     <span class="dot ${
+       index === 0 ? "active" : ""
+     }" data-image-slide="${index}"></span>
+  
+  `
     )
-    .join("");
+    .join(" ");
 }
 
 fetchDataUsingAsyncMethod();
 
-//Functionality
-//=============================================================
+//Sliding the Image Section
+//-----------------------------------------------------------------
+
 setTimeout(() => {
+  //variable Definition
   const slides = document.querySelectorAll(".slide");
+  const nextBTn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
   let currentSlide = 0;
 
-  //Function that give an activeClass to the dots
-  //=============================================
+  //Functionality section
+  //---------------------------
+  //Remove and Add Active Class on current slide
   function activeDots(getCurrentSlide) {
-    const removeActiveClass = document.querySelectorAll(".dot");
-    removeActiveClass.forEach((item) => {
+    const removeClassDots = document.querySelectorAll(".dot");
+    removeClassDots.forEach((item) => {
       item.classList.remove("active");
     });
 
     const activeClass = document.querySelector(
       `.dot[data-image-slide="${getCurrentSlide}"]`
     );
+
     activeClass.classList.add("active");
+
+    // document
+    //   .querySelector(`.dot[data-slide="${getCurrentSlide}"]`)
+    //   .classList.add("active");
   }
 
-  //function that changes the slides
-  //=============================================
+  //Change the image of the slider by clicking next or prev button
   function changeCurrentSlide(getCurrentSlide) {
-    const slides = document.querySelectorAll(".slide");
     slides.forEach(
       (slideItem, index) =>
         (slideItem.style.transform = ` translateX(${
@@ -83,35 +89,35 @@ setTimeout(() => {
   }
   changeCurrentSlide(currentSlide);
 
-  //PrevBtn click
-  //=============
+  //Next Button
+  nextBTn.addEventListener("click", () => {
+    currentSlide++;
+
+    if (currentSlide > slides.length - 1) currentSlide = 0;
+
+    activeDots(currentSlide);
+    changeCurrentSlide(currentSlide);
+  });
+
+  //Prev Button
   prevBtn.addEventListener("click", () => {
     currentSlide--;
+
     if (currentSlide < 0) currentSlide = slides.length - 1;
 
     activeDots(currentSlide);
     changeCurrentSlide(currentSlide);
   });
 
-  //NextBtn click
-  //=============
-  nextBtn.addEventListener("click", () => {
-    console.log(currentSlide);
-    currentSlide++;
-    if (currentSlide > slides.length) currentSlide = 0;
-
-    activeDots(currentSlide);
-    changeCurrentSlide(currentSlide);
-  });
-
-  //DotsContainer click
-  //=============
   dotsContainer.addEventListener("click", (event) => {
+    // console.log(event.target.classList, event.target.dataset.slide);
+    //check if has a class dot
     if (event.target.classList.contains("dot")) {
       const currentSlide = event.target.dataset.imageSlide;
+      console.log(event.target.classList, event.target.dataset.imageSlide);
+      changeCurrentSlide(currentSlide);
 
       activeDots(currentSlide);
-      changeCurrentSlide(currentSlide);
     }
   });
 }, 1000);
