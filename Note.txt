@@ -9,7 +9,11 @@ Comments by post	https://jsonplaceholder.typicode.com/posts/1/comments
 
 ✅ Best Practice: Be Descriptive and Consistent
 Context    	                    Good Function Names
+<<<<<<< HEAD
 Posts or blog ~entries	        renderPosts, displayPosts, showPosts
+=======
+Posts or blog entries	        renderPosts, displayPosts, showPosts
+>>>>>>> 9b2bb0412aa07b7a151d4d947ad230aa792df586
 User data	                    renderUserInfo, displayUserData, showProfile
 Comments	                    displayComments, renderComments
 Generic data	                displayResults, renderData, showResponse
